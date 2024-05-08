@@ -1,0 +1,45 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.conteiner{
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar{
+    text-align: center;
+    height: 10vh;
+    background-color: aqua;
+}
+
+ul{
+    margin: 0;
+    padding: 30px;
+}
+
+ul>a{
+    padding: 0px 50px;
+    text-decoration: none;
+}
+
+ul>a:hover{
+    text-decoration: underline;
+}
+
+.title{
+    padding-top: 10%;
+    font-size: 32px;
+    height: 17vh;
+    text-align: center;
+}
+
+.parrafo{
+    margin: auto;
+    text-align: center;
+    width: 60%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
