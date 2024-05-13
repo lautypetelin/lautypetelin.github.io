@@ -1,45 +1,67 @@
-body{
-    font-family: sans-serif;
+*{
     margin: 0;
     box-sizing: border-box;
-}
-
-.conteiner{
-    width: 100vw;
-    height: 100vh;
-}
-
-.navbar{
-    text-align: center;
-    height: 10vh;
-    background-color: aqua;
-}
-
-ul{
-    margin: 0;
-    padding: 30px;
-}
-
-ul>a{
-    padding: 0px 50px;
     text-decoration: none;
+    color: black;
 }
 
-ul>a:hover{
-    text-decoration: underline;
+body{
+    font-family: sans-serif;
+    background-color: rgb(245, 245, 245);
 }
 
-.title{
-    padding-top: 10%;
-    font-size: 32px;
-    height: 17vh;
-    text-align: center;
-}
-
-.parrafo{
+.container{
+    max-width: 1400px;
     margin: auto;
+}
+
+header{
+    background-color: coral;
+    position: fixed;
+    width: 100%;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+header .navbar{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    width: 60%;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+}
+
+header nav a{
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+nav a:hover{
+    color: white;
+}
+
+/*Cuando la pantalla supere los 720px*/
+@media (min-width:720px){ 
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between; /*Separamos los elementos a los extremos.*/
+    }
+
+    header .navbar{
+        flex-direction: row;
+    }
 }
