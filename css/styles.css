@@ -1,23 +1,25 @@
 *{
-    margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     color: black;
 }
 
 body{
+    margin: 0;
     font-family: sans-serif;
     background-color: rgb(245, 245, 245);
+    overflow-x: hidden;
 }
 
 .container{
     max-width: 1400px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 header{
     background-color: coral;
     position: fixed;
+    top: 0;
     width: 100%;
 }
 
@@ -53,9 +55,93 @@ nav a:hover{
     color: white;
 }
 
+/*Main*/
+.main-form{
+    padding-top: 150px;
+    width: 100%;
+}
+
+.main-form h1{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.main-form p{
+    text-align: center;
+    padding: 0 10%;
+    text-wrap: balance;
+}
+
+.contactDate{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contactDate p{
+    text-align: start;
+    margin: auto;
+}
+
+.contactDate p span{
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.main-form form{
+    background-color: rgba(0,0,0,.4);
+    width: 90%;
+    margin: auto;
+    border-radius: 7px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    border: none;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+input[type=submit]{
+    font-size: 17px;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #525252;
+    color: white;
+}
+
+/*Footer*/
+.footer{
+    background-color: #525252;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+footer p{
+    color: white;
+    margin: 0;
+}
+
 /*Cuando la pantalla supere los 720px*/
 @media (min-width:720px){ 
 
+    /*Cabecero*/
     header .container{
         flex-direction: row;
         justify-content: space-between; /*Separamos los elementos a los extremos.*/
@@ -63,5 +149,10 @@ nav a:hover{
 
     header .navbar{
         flex-direction: row;
+    }
+
+    /*Main*/
+    .main-form{
+        padding-top: 100px;
     }
 }
