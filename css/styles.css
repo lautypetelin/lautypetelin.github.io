@@ -9,8 +9,10 @@
 body{
     margin: 0;
     display: flex;
+    align-items: center;
+    justify-content:center ;
     font-family: sans-serif;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(104, 93, 93);
     overflow-x: hidden;
     padding: 20px;
 }
@@ -141,10 +143,76 @@ footer p{
     color: white;
     margin: 0;
 }
-.slider-section img{
+.container-carrousel{
+    position: relative;
+    margin: 250px;
     width: 500px;
+    height: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.carrouseles{
+    width: 200%;
+    height: 100%;
+    display: flex;
+    border: solid thin red;
 }
 
+.slider-section{
+    width: calc(100%/2);
+    height: 100%;
+}
+.slider-section img{
+    width: 500px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.btn-left{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+
+.btn-right{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+.btn-left:hover,
+.btn-right:hover{
+    background-color: black;
+    color: #e0e0e0;
+}
+.btn-left{
+    left: 10px;
+}
+.btn-right{
+    right: 10px;
+}
 /*Cuando la pantalla supere los 720px*/
 @media (min-width:720px){ 
 
