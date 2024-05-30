@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Contacto</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Contacto</title>
+</head>
 
-  <body>
+<body>
 
-    <!--Cabecero-->
-    <header>
-      <div class="container">
-        <a class="logo" href="index.html">
-          <img src="img/logo.png" alt="Logo del sitio." />
-          <h2 class="nombre-empresa">Compañia</h2>
-        </a>
+  <!--Cabecero-->
+  <header>
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img src="img/logo.png" alt="Logo del sitio." />
+        <h2 class="nombre-empresa">Compañia</h2>
+      </a>
 
-        <nav class="navbar">
-          <a href="index.html">Inicio</a>
-          <a href="articulo.html">Artículo</a>
-          <a href="contacto.html">Contacto</a>
-        </nav>
+      <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="articulo.html">Artículo</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--Formulario de contacto-->
+  <main class="main-form">
+    <div class="container">
+      <h1>¡Contáctanos!</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos deleniti accusantium dolore maiores molestias
+        quaerat dolorum sequi voluptatibus vero, dicta dolorem vitae impedit ad voluptatem ipsa hic. Praesentium,
+        doloremque autem!</p>
+      <div class="contactDate">
+        <p><span>Teléfono:</span>1234-56789</p>
+        <p><span>Email:</span>correoElectronico@mail.com</p>
+        <p><span>Ubicación:</span>Algún lugar del mundo</p>
       </div>
-    </header>
+      <form action="#" autocomplete="off">
+        <input type="text" name="name" placeholder="Ej: Jorge Paredes">
+        <input type="email" name="email" placeholder="Ej: correoElectronico@mail.com">
+        <textarea name="message" placeholder="Ej: Quisiera más información sobre..."></textarea>
+        <input type="submit" name="submit" value="Enviar">
+      </form>
+    </div>
+  </main>
 
-    <!--Formulario de contacto-->
-    <main class="main-form">
-      <div class="container">
-        <h1>¡Contáctanos!</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos deleniti accusantium dolore maiores molestias quaerat dolorum sequi voluptatibus vero, dicta dolorem vitae impedit ad voluptatem ipsa hic. Praesentium, doloremque autem!</p>
-        <div class="contactDate">
-          <p><span>Teléfono:</span>1234-56789</p>
-          <p><span>Email:</span>correoElectronico@mail.com</p>
-          <p><span>Ubicación:</span>Algún lugar del mundo</p>
-        </div>
-        <form action="#" autocomplete="off">
-          <input type="text" name="name" placeholder="Ej: Jorge Paredes">
-          <input type="email" name="email" placeholder="Ej: correoElectronico@mail.com">
-          <textarea name="message" placeholder="Ej: Quisiera más información sobre..."></textarea>
-          <input type="submit" name="submit" value="Enviar">
-        </form>
-      </div>
-    </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 | Página diseñada por @lautypetelin y @iaranievasok</p>
+    </div>
+  </footer>
+</body>
 
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 | Página diseñada por @lautypetelin y @iaranievasok</p>
-      </div>
-    </footer>
-  </body>
 </html>

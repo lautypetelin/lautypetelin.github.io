@@ -27,6 +27,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 header .logo{
@@ -145,12 +146,13 @@ footer p{
 }
 .container-carrousel{
     position: relative;
-    margin: 200px;
+    margin-top: 100px; 
     width: 500px;
     height: 600px;
     background-color: #e0e0e0;
     box-shadow: 0 8px 32px 0 rgba(0,0,0,.4);
     border-radius: 15px;
+    z-index: 900;
     overflow: hidden;
 }
 .carrouseles{
@@ -158,6 +160,7 @@ footer p{
     height: 100%;
     display: flex;
     border: solid thin red;
+    transform:translateX(-50) ;
 }
 
 .slider-section{
@@ -170,23 +173,7 @@ footer p{
     object-fit: cover;
     border-radius: 15px;
 }
-.btn-left{
-    display: flex;
-    position: absolute;
-    top: 50%;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border-radius: 50%;
-    padding: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    color: #ffffff81;
-    transform: translate(0,-50%);
-    transition: .5s ease;
-    user-select: none;
-}
-
-
+.btn-left,
 .btn-right{
     display: flex;
     position: absolute;
@@ -213,6 +200,28 @@ footer p{
 .btn-right{
     right: 10px;
 }
+
+.container-carrousel-general {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 150px; /* Ajusta este margen según sea necesario */
+    width: 100%;
+}
+
+.left-text, .right-text {
+    width: 150px; /* Ajusta el ancho según sea necesario */
+    height: 600px; /* Asegura que la altura sea igual a la del carrusel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .4);
+    border-radius: 15px;
+    margin: 0 10px;
+
 /*Cuando la pantalla supere los 720px*/
 @media (min-width:720px){ 
 
