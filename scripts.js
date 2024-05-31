@@ -1,3 +1,4 @@
+/*Carousel*/
 const btnLeft=document.querySelector(".btn-left"),
     btnRight=document.querySelector(".btn-right"),
     slider=document.querySelector("#slider"),
@@ -34,4 +35,31 @@ function moveToLeft() {
         slider.style.transform=`translate(-${operacion}%)`;
         slider.style.transition="all ease .6s";
     }
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+/*Validar datos | Captura de dato del formulario */
+function mostrarDatos() {
+    let elementName = document.getElementById("name");
+    let elementEmail = document.getElementById("email");
+    let elementPhone = document.getElementById("phone");
+    let elementMessage = document.getElementById("message");
+
+    document.getElementById("form").style.display="none";
+
+    let namePerson = elementName.value.trim();
+    let emailPerson = elementEmail.value.trim();
+    let phonePerson = elementPhone.value.trim();
+    let messagePerson = elementMessage.value.trim();
+
+    let item = document.createElement("p");
+
+    item.innerHTML = `Nombre completo: ${namePerson}`;
+    item.innerHTML = `Email: ${emailPerson}`;
+    item.innerHTML = `Teléfono: ${phonePerson}`;
+    item.innerHTML = `Message: ${messagePerson}`;
+
+    let elementList = document.getElementById("listaSaludos");
+    elementList.appendChild(item);
 }

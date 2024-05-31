@@ -106,6 +106,8 @@ nav a:hover{
     margin: auto;
     padding: 20px 20px;
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
 }
 
 input, textarea{
@@ -123,12 +125,12 @@ textarea{
     max-width: 100%;
 }
 
-input[type=submit]{
+button{
     font-size: 17px;
     margin: 0;
 }
 
-input[type=submit]:hover{
+button:hover{
     cursor: pointer;
     background-color: #525252;
     color: white;
@@ -152,6 +154,7 @@ input[type=submit]:hover{
     border-radius: 15px;
     z-index: 900;
     overflow: hidden;
+    margin: auto;
 }
 .carousels{
     width: 200%;
@@ -178,12 +181,12 @@ input[type=submit]:hover{
     position: absolute;
     top: 50%;
     font-size: 1.5rem;
-    background-color: transparent;
+    background-color: rgba(0,0,0,.4);
     border-radius: 50%;
     padding: 5px;
     font-weight: 600;
     cursor: pointer;
-    color: #ffffff81;
+    color: coral;
     transform: translate(0,-50%);
     transition: .5s ease;
     user-select: none;
@@ -202,8 +205,20 @@ input[type=submit]:hover{
     right: 10px;
 }
 
-.left-text, .right-text {
-    display: none;
+/*Articulo*/
+main.articulos{
+    margin-top: 180px;
+    text-align: center;
+}
+
+.articulos ol li{
+    margin: 15px 50px;
+}
+
+.articulos img{
+    display: block;
+    margin: auto;
+    box-shadow: 0px 0px 15px 5px black;
 }
 
 /*Footer*/
@@ -241,23 +256,14 @@ footer p{
         margin: 140px 0;
     }
 
-    .left-text, .right-text{
-        width: 150px; /* Ajusta el ancho según sea necesario */
-        height: 600px; /* Asegura que la altura sea igual a la del carrusel */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 50px;
-        background-color: #fff;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .4);
-        border-radius: 15px;
-        margin: 0 10px;
-    }
-
     /*Formulario de Contacto*/
     .main-form{
         margin-top: 100px;
         width: 80%;
+    }
+
+    /*Articulo*/
+    main.articulos{
+        margin-top: 120px;
     }
 }
