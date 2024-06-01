@@ -136,6 +136,31 @@ button:hover{
     color: white;
 }
 
+.titulos h1{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 20px;
+    font-style: italic;
+    text-align: left; 
+font-family: Arial Black; 
+font-weight: bold; 
+font-size: 40px; 
+color: #fff; 
+text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+}
+.titulos h2{
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    margin-top: 20px;
+    font-family: Arial; 
+    font-size: 30px; 
+    COLOR: #bf6e12; 
+    text-shadow: 0px 0px 9px #508AD3;
+}
+
 /*Carousel*/
 .container-carousel-general {
     display: flex;
@@ -160,7 +185,6 @@ button:hover{
     width: 200%;
     height: 100%;
     display: flex;
-    border: solid thin red;
     transform:translateX(-50) ;
 }
 
@@ -206,19 +230,30 @@ button:hover{
 }
 
 /*Articulo*/
-main.articulos{
-    margin-top: 180px;
-    text-align: center;
-}
-
-.articulos ol li{
-    margin: 15px 50px;
-}
 
 .articulos img{
     display: block;
     margin: auto;
     box-shadow: 0px 0px 15px 5px black;
+}
+.general{
+    display: flex;
+    justify-content: space-between; /* ajusta el espacio entre las columnas */
+    gap: 200px; /* Espacio entre columnas */
+    font-size:large;
+}
+
+.articulos-arti1, .ingredientes {
+    flex: 1; /* columnas toman el mismo ancho */
+}
+
+.articulos-arti1 {
+    margin-right: 20px; 
+}
+
+.ingredientes {
+    margin-left: 20px; 
+    margin-top: 30px;
 }
 
 /*Footer*/

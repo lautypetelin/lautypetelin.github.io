@@ -39,27 +39,33 @@ function moveToLeft() {
 
 //-----------------------------------------------------------------------------------------------------------
 
-/*Validar datos | Captura de dato del formulario */
-function mostrarDatos() {
-    let elementName = document.getElementById("name");
-    let elementEmail = document.getElementById("email");
-    let elementPhone = document.getElementById("phone");
-    let elementMessage = document.getElementById("message");
+/*Validar datos */
+function validarFormulario() {
+    // Limpiar mensajes de error
+    document.getElementById('error-messages').innerHTML = '';
 
-    document.getElementById("form").style.display="none";
+    // Obtener los valores de los campos
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    let valid = true;
+    let messages = [];
 
-    let namePerson = elementName.value.trim();
-    let emailPerson = elementEmail.value.trim();
-    let phonePerson = elementPhone.value.trim();
-    let messagePerson = elementMessage.value.trim();
+    // email con @
+    if (!email.includes('@')) {
+        valid = false;
+        messages.push('El correo electrónico debe contener un arroba (@).');
+    }
 
-    let item = document.createElement("p");
+    // num de tel (solo num)
+    if (!/^\d+$/.test(phone)) {
+        valid = false;
+        messages.push('El número de teléfono solo debe contener números.');
+    }
 
-    item.innerHTML = `Nombre completo: ${namePerson}`;
-    item.innerHTML = `Email: ${emailPerson}`;
-    item.innerHTML = `Teléfono: ${phonePerson}`;
-    item.innerHTML = `Message: ${messagePerson}`;
+    // mensajes de error si los hay
+    if (!valid) {
+        document.getElementById('error-messages').innerHTML = messages.join('<br>');
+    }
 
-    let elementList = document.getElementById("listaSaludos");
-    elementList.appendChild(item);
+    return valid;
 }

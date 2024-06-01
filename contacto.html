@@ -46,7 +46,7 @@
           <p><span>Ubicación:</span>Algún lugar del mundo</p>
         </div>
 
-        <form action="#" autocomplete="off" id="form" name="form" onsubmit="mostrarDatos()">
+        <form action="#" autocomplete="off" id="form" name="form" onsubmit="return validarFormulario()">
           <input type="text" id="name" name="name" placeholder="Ej: Jorge Paredes" maxlength="15" required autofocus/>
           <input
             type="email"
@@ -63,6 +63,7 @@
             placeholder="Ej: Quisiera más información sobre..."
           ></textarea>
           <button type="submit" name="submit">Enviar</button>
+          <div id="error-messages" class="error"></div>
         </form>
 
         <div class="container" style="text-align: center; margin-top: 15px;">
