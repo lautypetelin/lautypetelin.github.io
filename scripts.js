@@ -38,34 +38,3 @@ function moveToLeft() {
 }
 
 //-----------------------------------------------------------------------------------------------------------
-
-/*Validar datos */
-function validarFormulario() {
-    // Limpiar mensajes de error
-    document.getElementById('error-messages').innerHTML = '';
-
-    // Obtener los valores de los campos
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    let valid = true;
-    let messages = [];
-
-    // email con @
-    if (!email.includes('@')) {
-        valid = false;
-        messages.push('El correo electrónico debe contener un arroba (@).');
-    }
-
-    // num de tel (solo num)
-    if (!/^\d+$/.test(phone)) {
-        valid = false;
-        messages.push('El número de teléfono solo debe contener números.');
-    }
-
-    // mensajes de error si los hay
-    if (!valid) {
-        document.getElementById('error-messages').innerHTML = messages.join('<br>');
-    }
-
-    return valid;
-}
